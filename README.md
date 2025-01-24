@@ -7,14 +7,15 @@ AWS Architecture
 
 VPC Resource map
 
-![圖片.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1d7410be-1d90-4f64-86d0-3620dfee456e/2e9ab0c3-4bc3-4055-afb1-31eb5c7e5216/%E5%9C%96%E7%89%87.png)
+![image](https://github.com/user-attachments/assets/5efe827b-89db-444c-986d-ccb644919f4f)
 
 The infrastructure includes **4 subnets**:
 
 - **2 Public Subnets**: These are accessible from the internet
 - **2 Private Subnets**: These are isolated from direct internet access and are generally used for databases.
 
-![圖片.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1d7410be-1d90-4f64-86d0-3620dfee456e/c5606e54-2620-49ce-a2aa-99868f091578/%E5%9C%96%E7%89%87.png)
+![image](https://github.com/user-attachments/assets/6e4222fa-e55f-48cd-95e9-8954ffc7637a)
+
 
 **Network ACLs (NACLs):**
 
@@ -22,72 +23,34 @@ The infrastructure includes **4 subnets**:
 - **Assigned to:** Public Subnets
 - **Rules:** Allow **all inbound and outbound traffic**
 
-![圖片.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1d7410be-1d90-4f64-86d0-3620dfee456e/f003af41-5e94-403f-95a4-beb8e28ad9f8/%E5%9C%96%E7%89%87.png)
+![image](https://github.com/user-attachments/assets/84b4d905-b9be-4ac5-8c33-b2f8cbe6744d)
+
 
 Name: DB-ACL
 Assigned to: Private Subnets
 
 Private subnets only allow MySQL/Aurora traffic over port 3306 
 
-![圖片.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1d7410be-1d90-4f64-86d0-3620dfee456e/192e2a5e-6d56-429a-b7a3-47987e350226/%E5%9C%96%E7%89%87.png)
+![image](https://github.com/user-attachments/assets/631ff55f-c238-4b9e-a02e-8559e248d9e1)
 
 Database Security Group 
 
 allow traffic from CoffeeSG(MyBlog-SG)
 
-![圖片.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1d7410be-1d90-4f64-86d0-3620dfee456e/36930dd7-3b6b-4c28-94a4-4ae3d11ed63a/%E5%9C%96%E7%89%87.png)
+![image](https://github.com/user-attachments/assets/be07c630-b300-4257-b4f4-1d44a12f5cc8)
 
 Coffee Security Group(MyBlog-SG)
 
 allow traffic from Public Network (HTTP, HTTPs, MySQL, SSH)
 
-![圖片.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1d7410be-1d90-4f64-86d0-3620dfee456e/f4f72ff9-5939-48e5-8778-d92296a1ecda/%E5%9C%96%E7%89%87.png)
+![image](https://github.com/user-attachments/assets/0132051b-0202-4ab6-ac44-22579bbad05a)
 
 # EC2
 
 Have two EC2 in us-west-1a and us-west-1c
 
-![圖片.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1d7410be-1d90-4f64-86d0-3620dfee456e/87ff9a4d-adb6-4b81-83bb-a56acb6ecb9b/%E5%9C%96%E7%89%87.png)
+![image](https://github.com/user-attachments/assets/cf42c773-9130-4a91-967a-389e6f768fe2)
 
-The infrastructure includes **4 subnets**:
-
-- **2 Public Subnets**: These are accessible from the internet
-- **2 Private Subnets**: These are isolated from direct internet access and are generally used for databases.
-
-![圖片.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1d7410be-1d90-4f64-86d0-3620dfee456e/c5606e54-2620-49ce-a2aa-99868f091578/%E5%9C%96%E7%89%87.png)
-
-**Network ACLs (NACLs):**
-
-- **Name:** `coffee-ACL`
-- **Assigned to:** Public Subnets
-- **Rules:** Allow **all inbound and outbound traffic**
-
-![圖片.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1d7410be-1d90-4f64-86d0-3620dfee456e/f003af41-5e94-403f-95a4-beb8e28ad9f8/%E5%9C%96%E7%89%87.png)
-
-Name: DB-ACL
-Assigned to: Private Subnets
-
-Private subnets only allow MySQL/Aurora traffic over port 3306 
-
-![圖片.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1d7410be-1d90-4f64-86d0-3620dfee456e/192e2a5e-6d56-429a-b7a3-47987e350226/%E5%9C%96%E7%89%87.png)
-
-Database Security Group 
-
-allow traffic from CoffeeSG(MyBlog-SG)
-
-![圖片.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1d7410be-1d90-4f64-86d0-3620dfee456e/36930dd7-3b6b-4c28-94a4-4ae3d11ed63a/%E5%9C%96%E7%89%87.png)
-
-Coffee Security Group(MyBlog-SG)
-
-allow traffic from Public Network (HTTP, HTTPs, MySQL, SSH)
-
-![圖片.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1d7410be-1d90-4f64-86d0-3620dfee456e/f4f72ff9-5939-48e5-8778-d92296a1ecda/%E5%9C%96%E7%89%87.png)
-
-# EC2
-
-Have two EC2 in us-west-1a and us-west-1c
-
-![圖片.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1d7410be-1d90-4f64-86d0-3620dfee456e/87ff9a4d-adb6-4b81-83bb-a56acb6ecb9b/%E5%9C%96%E7%89%87.png)
 
 # Auto Scaling Group
 
@@ -95,7 +58,7 @@ Have two EC2 in us-west-1a and us-west-1c
 
 **Scaling Limits** : `2 - 4`
 
-![圖片.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1d7410be-1d90-4f64-86d0-3620dfee456e/acc7bbcb-dfc8-4430-ab7c-d62a6a89b44d/%E5%9C%96%E7%89%87.png)
+![image](https://github.com/user-attachments/assets/f9125d31-e15a-4873-a24a-4b9e78a59428)
 
 # Applicant Load Balancer
 
@@ -103,7 +66,7 @@ Resource map
 
 ALB provides traffic distribution functionality at the HTTP and HTTPS layers, while ASG can automatically adjust the number of instances to respond to traffic fluctuations.
 
-![圖片.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1d7410be-1d90-4f64-86d0-3620dfee456e/ac69955d-e52b-4d60-a6a2-469733f29501/%E5%9C%96%E7%89%87.png)
+![image](https://github.com/user-attachments/assets/95b4cc19-fde6-4637-89a5-798529461780)
 
 # RDS
 
@@ -111,7 +74,7 @@ Configure Multi-AZ Deployment with RDS Subnet Group
 
 The subnets of the database subnet group include two subnets, **us-west-1a** and **us-west-1c**, which are located in different availability zones.
 
-![圖片.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1d7410be-1d90-4f64-86d0-3620dfee456e/dd1eb909-f691-4d41-ac12-0e4e78b080f8/%E5%9C%96%E7%89%87.png)
+![image](https://github.com/user-attachments/assets/ae2f7abb-408f-422d-bfaa-24d3c28e85ce)
 
 The database uses MariaDB.
 
@@ -124,31 +87,8 @@ The instance is deployed in the **us-west-1** region, specifically in the `1a` a
 
 **Scaling Limits** : `2 - 4`
 
-![圖片.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1d7410be-1d90-4f64-86d0-3620dfee456e/acc7bbcb-dfc8-4430-ab7c-d62a6a89b44d/%E5%9C%96%E7%89%87.png)
+![image](https://github.com/user-attachments/assets/e0a31a94-ebc7-4686-baae-1458bb327ae0)
 
-# Applicant Load Balancer
-
-Resource map
-
-ALB provides traffic distribution functionality at the HTTP and HTTPS layers, while ASG can automatically adjust the number of instances to respond to traffic fluctuations.
-
-![圖片.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1d7410be-1d90-4f64-86d0-3620dfee456e/ac69955d-e52b-4d60-a6a2-469733f29501/%E5%9C%96%E7%89%87.png)
-
-# RDS
-
-Configure Multi-AZ Deployment with RDS Subnet Group
-
-The subnets of the database subnet group include two subnets, **us-west-1a** and **us-west-1c**, which are located in different availability zones.
-
-![圖片.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1d7410be-1d90-4f64-86d0-3620dfee456e/dd1eb909-f691-4d41-ac12-0e4e78b080f8/%E5%9C%96%E7%89%87.png)
-
-The database uses MariaDB.
-
-The instance is deployed in the **us-west-1** region, specifically in the `1a` availability zone.
-
-**Publicly Accessible**: `No`
-
-![圖片.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1d7410be-1d90-4f64-86d0-3620dfee456e/bd7f4cd9-ef2d-4675-b5d6-0de75e2ac041/%E5%9C%96%E7%89%87.png)
 
 # Route 53
 
@@ -156,7 +96,7 @@ Alias feature enabled, this record will point to CloudFront.
 
 Using Smaple Route
 
-![圖片.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1d7410be-1d90-4f64-86d0-3620dfee456e/d03ed99e-01ff-4b20-b9d8-0e5fb7e70ac7/%E5%9C%96%E7%89%87.png)
+![image](https://github.com/user-attachments/assets/89725e87-8e3f-4df3-8c24-f3c0b7d8b8f1)
 
 # Cloudfront
 
@@ -164,3 +104,6 @@ The CloudFront distribution will use all available edge locations
 A custom domain name, `samkuo.click`, has been associated with the distribution.
 
 A custom SSL certificate created with Certificate Manager is being used to ensure secure HTTPS connections.
+
+![image](https://github.com/user-attachments/assets/b6932abd-81cb-4a5a-a0de-c876122a343b)
+
