@@ -34,15 +34,15 @@ The infrastructure includes **4 subnets**:
 
 **Security Group**
 
-Database Security Group 
+- Database Security Group 
 
-allow traffic from CoffeeSG(MyBlog-SG)
+- allow traffic from CoffeeSG(MyBlog-SG)
 
 ![image](https://github.com/user-attachments/assets/be07c630-b300-4257-b4f4-1d44a12f5cc8)
 
-Coffee Security Group(MyBlog-SG)
+- Coffee Security Group(MyBlog-SG)
 
-allow traffic from Public Network (HTTP, HTTPs, MySQL, SSH)
+- allow traffic from Public Network (HTTP, HTTPs, MySQL, SSH)
 
 ![image](https://github.com/user-attachments/assets/0132051b-0202-4ab6-ac44-22579bbad05a)
 
