@@ -26,12 +26,13 @@ The infrastructure includes **4 subnets**:
 ![image](https://github.com/user-attachments/assets/84b4d905-b9be-4ac5-8c33-b2f8cbe6744d)
 
 
-Name: DB-ACL
-Assigned to: Private Subnets
-
-Private subnets only allow MySQL/Aurora traffic over port 3306 
+- **Name:** `DB-ACL`
+- **Assigned to:** Private Subnets
+- **Rules:** Private subnets only allow MySQL/Aurora traffic over port 3306 
 
 ![image](https://github.com/user-attachments/assets/631ff55f-c238-4b9e-a02e-8559e248d9e1)
+
+**Security Group**
 
 Database Security Group 
 
@@ -80,12 +81,7 @@ The database uses MariaDB.
 
 The instance is deployed in the **us-west-1** region, specifically in the `1a` availability zone.
 
-**Publicly Accessible**: `No`
-# Auto Scaling Group
-
-**Desired Capacity** : `2`
-
-**Scaling Limits** : `2 - 4`
+Publicly Accessible: `No`
 
 ![image](https://github.com/user-attachments/assets/e0a31a94-ebc7-4686-baae-1458bb327ae0)
 
