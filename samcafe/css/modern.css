@@ -1,0 +1,320 @@
+/* General Body Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfdfd;
+}
+
+/* Header and Navigation */
+.main-header {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Edu AU VIC WA NT Pre', cursive;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #5d4037; /* A coffee-like brown */
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #555;
+    margin: 0 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: #8d6e63; /* A lighter coffee brown */
+}
+
+/* Main Content Area */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section Styling */
+.content-section {
+    padding: 3rem 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.content-section:last-of-type {
+    border-bottom: none;
+}
+
+.content-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #4e342e;
+}
+
+/* Hero/Welcome Section */
+.welcome-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.welcome-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.welcome-text {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 2rem auto 0 auto;
+    text-align: center;
+}
+
+
+/* About Us Section */
+.about-us-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.about-us-content img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.about-us-content p {
+    flex: 1;
+    min-width: 300px;
+    font-size: 1.1rem;
+}
+
+
+/* Contact Us & Footer */
+.contact-info {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.contact-info h3 {
+    margin-top: 2rem;
+    color: #4e342e;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    background-color: #3e2723;
+    color: #fff;
+}
+
+/* --- Menu Page Specific Styles --- */
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.menu-group-header {
+    grid-column: 1 / -1; /* Make header span all columns */
+    font-family: 'Edu AU VIC WA NT Pre', cursive;
+    font-size: 2.2rem;
+    color: #4e342e;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    border-bottom: 2px solid #8d6e63;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.product-card .container {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: #5d4037;
+}
+
+.product-card .price {
+    color: #2E7D32; /* A shade of green */
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.product-card .description {
+    color: #666;
+    flex-grow: 1;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.product-card .quantity-input {
+    width: 80px;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Order Form Summary and Actions */
+.order-summary {
+    text-align: center;
+    margin: 3rem auto;
+    padding: 2rem;
+    max-width: 500px;
+    background: #fafafa;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.order-summary p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4e342e;
+    margin: 0 0 1rem 0;
+}
+
+.order-summary .button {
+    background-color: #8d6e63;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+    margin: 0.5rem;
+}
+
+.order-summary .button[type="reset"] {
+    background-color: #757575;
+}
+
+.order-summary .button:hover {
+    background-color: #5d4037;
+}
+
+.order-summary .button[type="reset"]:hover {
+    background-color: #616161;
+}
+
+/* --- Order History Page Specific Styles --- */
+
+.order-history-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.order-block {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.order-header {
+    background-color: #fafafa;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #444;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.order-header span {
+    white-space: nowrap;
+}
+
+.order-items-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-items-table th,
+.order-items-table td {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.order-items-table th {
+    background-color: #f9f9f9;
+    font-weight: 600;
+    color: #555;
+}
+
+.order-items-table tr:last-child td {
+    border-bottom: none;
+}
+
+.order-items-table td {
+    color: #666;
+}
+
+.order-items-table .item-name {
+    font-weight: bold;
+}
+
+.order-items-table .item-price,
+.order-items-table .item-quantity,
+.order-items-table .item-total {
+    text-align: right;
+} 

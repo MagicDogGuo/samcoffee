@@ -1,113 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Caf&eacute;!</title>
-	<link rel="stylesheet" href="css/styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sam's Café</title>
+	<link rel="stylesheet" href="css/modern.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
-<body class="bodyStyle">
+<body>
 
-	<div id="header" class="mainHeader">
-		<hr>
-		<div class="left">Sam's Coffee</div>
-	</div>
-	<br>
 	<?php
-		// Get the application environment parameters from the Parameter Store.
-		include ('getAppParameters.php');///////////////////////
+		// Get the application environment parameters
+		include ('getAppParameters.php');
 	?>
-	<hr>
-	<div class="topnav">
-		<a href="index.php">Home</a>
-		<a href="#aboutUs">About Us</a>
-		<a href="#contactUs">Contact Us</a>
-		<a href="menu.php">Menu</a>
-		<a href="orderHistory.php">Order History</a>
-	</div>
-	<hr>
-	<div id="mainContent">
 
-		<div id="mainPictures" class="center">
-			<table>
-				<tr>
-					<td><img src="images/Coffee-and-Pastries.jpg" height=auto width="470"></td>
-					<td><img src="images/Cake-Vitrine.jpg" height=auto width="470"></td>
-				</tr>
-			</table>
-			<hr>
-			<p>Our cafee shop; offers an assortment of delicious and delectable pastries and coffees that will put a smile on your face. From cookies to croissants, tarts and cakes, each treat is especially prepared to excite your tastebuds and brighten your day!</p>
-			<br>
-			<table>
-				<tr>
-					<td bgcolor= "#a50000">
-						<div class="cursiveText">Frank bakes a rich variety of cookies. Try them all!</div>
-						<table>
-							<tr>
-								<td><img src="images/Cookies.jpg" height=auto width="300"></td>
-							</tr>
-						</table>
-					</td>
-					<td bgcolor="#653004">
-						<table>
-							<tr>
-								<td><img src="images/Cup-of-Hot-Chocolate.jpg" height=auto width="200"></td>
-								<td class="cursiveText">Tea,<br>Coffee,<br>Lattes,<br> and Hot Chocolate.<br>Yes, we have it!</td>
-							</tr>
-						</table>
-					</td>
-					<td bgcolor="#a50000">
-						<div class="cursiveText">Our tarts are always <br/> a customer favorite!<br><br>
-					  </div>
-						<table>
-							<tr>
-								<td><img src="images/Strawberry-Tarts.jpg" height=auto width="170"></td>
-								<td><img src="images/Strawberry-Blueberry-Tarts.jpg" height=auto width="170"></td>
-							</tr>
-						</table>
-					</td>
-				</tr>
-			</table>
-			<hr>
-		</div>
-	</div>
+	<header class="main-header">
+		<div class="logo">Sam's Café</div>
+		<nav class="main-nav">
+			<a href="index.php" class="active">Home</a>
+			<a href="#about">About Us</a>
+			<a href="#contact">Contact Us</a>
+			<a href="menu.php">Menu</a>
+			<a href="orderHistory.php">Order History</a>
+		</nav>
+	</header>
 
-	<div id="aboutUs" class="center">
-		<hr>
-		<div>
+	<main>
+		<section class="content-section" id="welcome">
+			<h2>Welcome to Our Café</h2>
+			<div class="welcome-gallery">
+				<img src="images/Coffee-and-Pastries.jpg" alt="A cup of coffee and assorted pastries">
+				<img src="images/Cake-Vitrine.jpg" alt="A display case with various cakes">
+				<img src="images/Cookies.jpg" alt="A collection of freshly baked cookies">
+				<img src="images/Cup-of-Hot-Chocolate.jpg" alt="A warm cup of hot chocolate">
+				<img src="images/Strawberry-Tarts.jpg" alt="Fresh strawberry tarts">
+				<img src="images/Strawberry-Blueberry-Tarts.jpg" alt="Tarts with strawberries and blueberries">
+			</div>
+			<p class="welcome-text">
+				Our café offers an assortment of delicious and delectable pastries and coffees that will put a smile on your face. From cookies to croissants, tarts and cakes, each treat is especially prepared to excite your tastebuds and brighten your day!
+			</p>
+		</section>
+
+		<section class="content-section" id="about">
 			<h2>About Us</h2>
-		</div>
-			<table>
-				<tr>
-					<td><img src="images/SamKuoShop.jpg" height="300" width=auto></td>
-					<td><p class="left">Sam has been adding sweetness to their customers' lives since 2025.  Sam's recipes have been passed down from his mother and use simple and fresh ingredients to produce delightful flavors.  He will personally greet you with a welcoming smile when you visit!</p></td>
-				</tr>
-			</table>
-			<hr>
-		</div>
+			<div class="about-us-content">
+				<img src="images/SamKuoShop.jpg" alt="A picture of Sam Kuo's shop">
+				<p>
+					Sam has been adding sweetness to their customers' lives since 2025. Sam's recipes have been passed down from his mother and use simple and fresh ingredients to produce delightful flavors. He will personally greet you with a welcoming smile when you visit!
+				</p>
+			</div>
+		</section>
 
-	<div id="contactUs" align="center">
-		<hr>
-		<div>
+		<section class="content-section" id="contact">
 			<h2>Contact Us</h2>
-		</div>
-		<table>
-			<tr>
-				<td><img src="images/Coffee-Shop.jpg" height=auto width="120"></td>
-			</tr>
-		</table>
-		<div><p>321 Any Street<br>Any Town, New Zealand<br><br>Tel: +64-21-027-933-55</p></div>
-		<div>
-			<h3>Hours</h3>
-		</div>
-		<div>Weekdays: 6:00am - 6:00pm<br>Saturday: 7:00am - 7:00pm<br>Closed on Sundays</div>
-	</div>
+			<div class="contact-info">
+				<img src="images/Coffee-Shop.jpg" height="auto" width="150" alt="The exterior of the coffee shop" style="border-radius: 8px; margin-bottom: 1rem;">
+				<p>
+					321 Any Street<br>
+					Any Town, New Zealand<br><br>
+					Tel: +64-21-027-933-55
+				</p>
+				<h3>Hours</h3>
+				<p>
+					Weekdays: 6:00am - 6:00pm<br>
+					Saturday: 7:00am - 7:00pm<br>
+					Closed on Sundays
+				</p>
+			</div>
+		</section>
+	</main>
 
-	<div id="Copyright" class="center">
-		<h5>&copy; 2025, Sam Kuo, Inc. All rights reserved.</h5>
-	</div>
+	<footer class="site-footer">
+		<p>&copy; 2025, Sam Kuo, Inc. All rights reserved.</p>
+	</footer>
+
 </body>
 </html>
