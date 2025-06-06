@@ -5,7 +5,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #fdfdfd;
+    background-color: #fffef5; /* Light creamy yellow background */
 }
 
 /* Header and Navigation */
@@ -317,4 +317,27 @@ main {
 .order-items-table .item-quantity,
 .order-items-table .item-total {
     text-align: right;
+}
+
+/* --- Order Confirmation Page Specific Styles --- */
+
+.order-confirmation-box {
+    text-align: center;
+    max-width: 800px;
+    margin: 2rem auto 3rem auto;
+    padding: 2rem;
+    background-color: #f4f8f4;
+    border: 1px solid #c8e6c9; /* Light green border */
+    border-radius: 8px;
+}
+
+.order-confirmation-box h2 {
+    font-size: 2rem;
+    color: #2E7D32; /* Green */
+    margin-top: 0;
+}
+
+.order-confirmation-box p {
+    font-size: 1.1rem;
+    line-height: 1.7;
 } 
