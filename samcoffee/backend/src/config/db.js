@@ -14,6 +14,7 @@ async function getPool() {
       user: params.dbUser,
       password: params.dbPassword,
       database: params.dbName,
+      ssl: { rejectUnauthorized: false },
     }
   } else {
     config = {
