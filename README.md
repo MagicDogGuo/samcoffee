@@ -2,6 +2,10 @@
 
 This is a demo project for a coffee shop website, featuring a modern user interface and a backend powered by PHP and MariaDB.
 
+## AWS Architecture
+
+For detailed information on the AWS cloud architecture used to deploy the live version of this project, please see the [**AWS Architecture Documentation**](AWS_arch.md).
+
 ## Demo Website
 A live version of this project is deployed on AWS. You can view it here:
 [https://samkuo.click/samcafe/index.php](https://samkuo.click/samcafe/index.php)
@@ -36,9 +40,5 @@ To run this project on your local machine, you will need a PHP development envir
 
 4.  **View the Website:**
     *   Open your web browser and go to `http://localhost:8000`.
-
-## AWS Architecture
-
-For detailed information on the AWS cloud architecture used to deploy the live version of this project, please see the [**AWS Architecture Documentation**](AWS_arch.md).
 
 
