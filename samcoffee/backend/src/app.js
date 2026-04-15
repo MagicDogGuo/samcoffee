@@ -1,7 +1,8 @@
 require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
-const { getParamsFromSSM } = require('./ssm') // 假設你的 SSM 邏輯在 ssm.js
+// 因為 app.js 與 config 資料夾都在 src 下
+const { getParamsFromSSM } = require('./config/ssm')
 
 const app = express()
 app.use(cors())
