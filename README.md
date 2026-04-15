@@ -30,8 +30,10 @@ samcoffee/
 │       └── src/
 │           ├── config/      # db.js (MySQL), ssm.js (AWS SSM)
 │           └── routes/      # menu.js, orders.js
-└── samcafe/                 # Legacy PHP version
+└── samcafe/                 # Legacy PHP + MariaDB version (deprecated)
 ```
+
+> **Note:** `samcafe/` is an older version of the framework, based on PHP and MariaDB, and is no longer maintained. For the current version, please refer to `samcoffee/`.
 
 ## AWS Architecture
 
