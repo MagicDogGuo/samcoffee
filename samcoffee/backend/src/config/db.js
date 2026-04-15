@@ -5,28 +5,13 @@ let pool = null
 async function getPool() {
   if (pool) return pool
 
-  let config
-  if (process.env.NODE_ENV === 'production') {
-    const { getParamsFromSSM } = require('./ssm')
-    const params = await getParamsFromSSM()
-    config = {
-      host: params.dbUrl,
-      user: params.dbUser,
-      password: params.dbPassword,
-      database: params.dbName,
-      ssl: { rejectUnauthorized: false },
-    }
-  } else {
-    config = {
-      host: process.env.DB_HOST,
-      user: process.env.DB_USER,
-      password: process.env.DB_PASSWORD,
-      database: process.env.DB_NAME,
-    }
-  }
-
+  // app.js 啟動時已透過 getParamsFromSSM() 將 SSM 參數注入 process.env
+  // 本地開發時，請在 .env 中使用相同的 key 名稱（dbUrl、dbUser、dbPassword、dbName）
   pool = mysql.createPool({
-    ...config,
+    host: process.env.dbUrl,
+    user: process.env.dbUser,
+    password: process.env.dbPassword,
+    database: process.env.dbName,
     waitForConnections: true,
     connectionLimit: 10,
   })
