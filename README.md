@@ -38,6 +38,8 @@ samcoffee/
 ## AWS Architecture
 
 For detailed information on the AWS cloud architecture, please see the [**AWS Architecture Documentation**](AWS_arch.md).
+![My coffee Website](https://github.com/user-attachments/assets/dc13ec58-de7c-4b87-885a-1844e5b859fc)
+
 
 ## Demo Website
 
